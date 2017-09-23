@@ -104,6 +104,9 @@ function endGame() {
 
   clearInterval(gameInterval)
 
+  for (let i = 0; i < ROCKS.length; i++) {
+    ROCKS[i] = null 
+  }
   ROCKS.forEach(function(rock) { rock.remove() })
 
   document.removeEventListener('keydown', moveDodger)
