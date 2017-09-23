@@ -109,7 +109,7 @@ function endGame() {
   }
 
   document.removeEventListener('keydown', moveDodger)
-  window.removeEventLIstener('keydown', moveDodger)
+  window.removeEventListener('keydown', moveDodger)
 //  START.innerHTML = 'Play again?'
 //  START.style.display = 'inline'
 
