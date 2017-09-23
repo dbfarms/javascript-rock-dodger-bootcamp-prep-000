@@ -108,13 +108,8 @@ function endGame() {
     ROCKS[i].remove()
   }
 
+  document.removeEventListener('keydown', moveDodger)
 
-  document.removeEventListener('keydown', moveDodger)
-/*
-  clearInterval(gameInterval)
-  ROCKS=[] // trying to remove rocks from DOM
-  document.removeEventListener('keydown', moveDodger)
-*/
   return alert("YOU LOSE!")
 }
 
@@ -122,9 +117,10 @@ function moveDodger(e) {
 
   document.addEventListener('keydown', function(e) {
     if (e.which === LEFT_ARROW) {
-      moveDodgerLeft()
       e.preventDefault()
       e.stopPropagation()
+      moveDodgerLeft()
+      
     } else if (e.which === RIGHT_ARROW) {
       moveDodgerRight()
     }
