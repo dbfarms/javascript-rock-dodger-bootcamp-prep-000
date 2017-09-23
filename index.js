@@ -107,7 +107,7 @@ function endGame() {
   for (let i = 0; i < ROCKS.length; i++) {
     ROCKS[i].remove()
   }
-
+  
 
   document.removeEventListener('keydown', moveDodger)
 /*
@@ -115,7 +115,7 @@ function endGame() {
   ROCKS=[] // trying to remove rocks from DOM
   document.removeEventListener('keydown', moveDodger)
 */
-  return alert("YOU LOSE!")
+  alert("YOU LOSE!")
 }
 
 function moveDodger(e) {
