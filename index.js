@@ -110,6 +110,9 @@ function endGame() {
 
   document.removeEventListener('keydown', moveDodger)
 
+  START.innerHTML = 'Play again?'
+  START.style.display = 'inline'
+
   return alert("YOU LOSE!")
 }
 
@@ -119,6 +122,7 @@ function moveDodger(e) {
     if (e.which === LEFT_ARROW) {
       e.preventDefault()
       e.stopPropagation()
+      //alert("you hit left")
       moveDodgerLeft()
 
     } else if (e.which === RIGHT_ARROW) {
