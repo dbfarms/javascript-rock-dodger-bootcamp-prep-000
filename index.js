@@ -108,7 +108,7 @@ function endGame() {
     ROCKS[i].remove()
   }
 
-  document.removeEventListener('keydown', moveDodger)
+  //document.removeEventListener('keydown', moveDodger)
   window.removeEventListener('keydown', moveDodger)
 //  START.innerHTML = 'Play again?'
 //  START.style.display = 'inline'
